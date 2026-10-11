@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { FiGithub, FiLinkedin, FiMail, FiArrowDown } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiDownload } from "react-icons/fi";
 import Image from "next/image";
 
 export default function Hero() {
@@ -78,6 +78,14 @@ export default function Hero() {
               </a>
               <a href="#contact" className="btn-outline">
                 Get In Touch
+              </a>
+              <a
+                href="/Jeffrey_Jones_Copson_CV.pdf"
+                download="Jeffrey_Jones_Copson_CV.pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 font-medium text-sm hover:-translate-y-0.5"
+              >
+                <FiDownload className="w-4 h-4" />
+                Download CV
               </a>
             </div>
 

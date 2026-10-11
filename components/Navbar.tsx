@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
+import { FiSun, FiMoon, FiMenu, FiX, FiDownload } from "react-icons/fi";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -60,6 +60,14 @@ export default function Navbar() {
               {resolvedTheme === "dark" ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
             </button>
           )}
+          <a
+              href="/Jeffrey_Jones_Copson_CV.pdf"
+              download="Jeffrey_Jones_Copson_CV.pdf"
+              className="hidden md:inline-flex items-center gap-1.5 btn-outline text-sm py-2 px-4"
+            >
+              <FiDownload className="w-4 h-4" />
+              CV
+            </a>
           <a href="#contact" className="hidden md:inline-flex btn-primary text-sm py-2 px-4">
             Hire Me
           </a>
@@ -86,6 +94,17 @@ export default function Navbar() {
             <li>
               <a href="#contact" className="btn-primary w-full justify-center mt-2" onClick={() => setMobileOpen(false)}>
                 Hire Me
+              </a>
+            </li>
+            <li>
+              <a
+                href="/Jeffrey_Jones_Copson_CV.pdf"
+                download="Jeffrey_Jones_Copson_CV.pdf"
+                className="inline-flex items-center justify-center gap-2 w-full btn-outline mt-1"
+                onClick={() => setMobileOpen(false)}
+              >
+                <FiDownload className="w-4 h-4" />
+                Download CV
               </a>
             </li>
           </ul>
